@@ -6,8 +6,6 @@ It is almost impossible to keep updating the list of papers as there are many ou
 
 Though, I will mention some papers that I have found extremely interesting. This section will be biased!
 
-> Note: This is a WIP and will be updated on a regular basis but with an unknown periodicty. 
-
 ## BOOKS + STRUCTURED COURSES
 
 1. Classic NLP Textbook: [Speech and Language Processing by Jurafsky & Martin](https://web.stanford.edu/~jurafsky/slp3/)
