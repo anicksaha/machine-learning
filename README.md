@@ -8,5 +8,5 @@ It is almost impossible to keep updating the list of papers as there are many ou
 > Note: This is a WIP and will be updated on a regular basis but with an unknown periodicty. 
 
 - [Resources](https://github.com/anicksaha/machine-learning/blob/master/resources/resources.md)
-- [supervised-learning](https://github.com/anicksaha/machine-learning/blob/master/resources/supervised-learning.md)
-- [unsupervised-learning](https://github.com/anicksaha/machine-learning/blob/master/resources/unsupervised-learning.md)
+- [Supervised-learning](https://github.com/anicksaha/machine-learning/blob/master/resources/supervised-learning.md)
+- [Unsupervised-learning](https://github.com/anicksaha/machine-learning/blob/master/resources/unsupervised-learning.md)
