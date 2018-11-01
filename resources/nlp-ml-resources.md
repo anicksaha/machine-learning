@@ -1,4 +1,4 @@
-## nlp-ml-resources
+# nlp-ml-resources
 
 
 > ### Books + Structured Courses
