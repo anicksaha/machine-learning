@@ -3,7 +3,7 @@
 > 2. [Machine Learning - Georgia Tech (Udacity)](https://www.udacity.com/course/machine-learning--ud262)
 
 ### Structured Courses
-> 1. [CS224d: Deep Learning for Natural Language Processing](https://youtu.be/kZteabVD8sU)
+> 1. [CS 224d: Deep Learning for Natural Language Processing](https://youtu.be/kZteabVD8sU)
 > 2. [CS 224n: Natural Language Processing with Deep Learning ](https://youtu.be/OQQ-W_63UgQ)
 > 3. [CS 229: Machine Learning](https://see.stanford.edu/Course/CS229)
 
