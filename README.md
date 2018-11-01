@@ -1,4 +1,4 @@
-# Machine-Learning   [![text](resources/_badges/awesome.svg)](https://github.com/anicksaha/machine-learning)
+# Machine-Learning   [![text](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/anicksaha/machine-learning)
 
 
 This repository contains links to resources (papers, ebooks, blog posts, and courses) that I have found useful over the years to learn about NLP and ML. 
