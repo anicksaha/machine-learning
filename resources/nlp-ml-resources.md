@@ -1,7 +1,7 @@
-### nlp-ml-resources
+## nlp-ml-resources
 
 
-##### Books + Structured Courses
+> ### Books + Structured Courses
 
 1. Classic NLP Textbook: [Speech and Language Processing by Jurafsky & Martin](https://web.stanford.edu/~jurafsky/slp3/)
 2. NLP textbook with ML: [Natural Language Processing by Eisenstein](https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf)
