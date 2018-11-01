@@ -8,4 +8,4 @@
 > 3. [CS 229: Machine Learning](https://see.stanford.edu/Course/CS229)
 
 ### Miscellaneous
-> - [What is hypothesis in machine learning?](https://www.quora.com/What-is-hypothesis-in-machine-learning)
+> 1. [What is hypothesis in machine learning?](https://www.quora.com/What-is-hypothesis-in-machine-learning)
