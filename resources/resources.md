@@ -11,3 +11,6 @@
 > 1. [What is hypothesis in machine learning?](https://www.quora.com/What-is-hypothesis-in-machine-learning)
 > 2. [Objective function, cost function, loss function: are they the same thing?](https://stats.stackexchange.com/questions/179026/objective-function-cost-function-loss-function-are-they-the-same-thing)
 > 3. [Link to a collection of books.](https://github.com/josephmisiti/awesome-machine-learning/blob/master/books.md)
+
+
+[[back]](https://github.com/anicksaha/machine-learning/blob/master/README.md)
