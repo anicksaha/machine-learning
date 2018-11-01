@@ -13,4 +13,4 @@
 > 3. [Link to a collection of books.](https://github.com/josephmisiti/awesome-machine-learning/blob/master/books.md)
 
 
-[[back]](https://github.com/anicksaha/machine-learning/blob/master/README.md)
+[[back]](https://github.com/anicksaha/machine-learning)
