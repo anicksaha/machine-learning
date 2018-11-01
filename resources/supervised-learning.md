@@ -1,2 +1,2 @@
 
-[[back]](https://github.com/anicksaha/machine-learning/blob/master/README.md)
+[[back]](https://github.com/anicksaha/machine-learning)
