@@ -16,5 +16,6 @@
 ### Miscellaneous
 > 1. Fast.ai MOOC matrials for practical ideas: [Practical Deep Learning For Coders](http://course.fast.ai/)
 > 2. CNN quick points: [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/convolutional-networks/)
+> 3. NN and DL for NLP: [A Primer on Neural Network Models for Natural Language Processing](http://u.cs.biu.ac.il/~yogo/nnlp.pdf)
 
 
