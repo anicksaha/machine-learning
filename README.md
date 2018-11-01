@@ -1,4 +1,4 @@
-### machine-learning
+## Machine-Learning
 
 This repository contains links to resources (papers, ebooks, blog posts, and courses) that I have found useful over the years to learn about NLP and ML. 
 
@@ -9,5 +9,3 @@ It is almost impossible to keep updating the list of papers as there are many ou
 - [Resources](https://github.com/anicksaha/machine-learning/blob/master/resources/resources.md)
 - [supervised-learning](https://github.com/anicksaha/machine-learning/blob/master/resources/supervised-learning.md)
 - [unsupervised-learning](https://github.com/anicksaha/machine-learning/blob/master/resources/unsupervised-learning.md)
-
-
