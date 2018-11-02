@@ -1,6 +1,7 @@
 ### Starters
 > 1. [Intro to Machine Learning (Udacity)](https://www.udacity.com/course/intro-to-machine-learning--ud120)
 > 2. [Machine Learning - Georgia Tech (Udacity)](https://www.udacity.com/course/machine-learning--ud262)
+> 3. [Deep Learning by Google (Udacity)](https://www.udacity.com/course/deep-learning--ud730)
 
 ### Structured Courses
 > 1. [CS 224d: Deep Learning for Natural Language Processing](https://www.youtube.com/results?search_query=cs+224+d)
