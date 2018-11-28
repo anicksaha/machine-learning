@@ -48,12 +48,11 @@ for idx = 1:size(m,2)
         error = 0;
         
         for t = 1:size(x,1)
-            
             % Feed Forward
             z = [1];
             for h = 1:hidden_units
                 z_h = ReLU(x(t,:), w(h,:));
-                z = [z,z_h]; % dimension 1 X (m+1)
+                z = [z,z_h]; % dimension [1 x (m+1)]
             end
             
             y = [];
@@ -62,12 +61,11 @@ for idx = 1:size(m,2)
                 y = [y,y_i];
             end
             
-            % Softmax(y)
             r = one_hot_encoding(training_labels(t), k);
             y = softmax(y);
             error = error + r*log(y)'; % Cross Entropy 
             
-            % Back Propagtion
+            % Back Propagation
             dv = stepsize*(r-y)'*z; % dimension [k x (m+1)]
             dw = [];
             
@@ -96,12 +94,12 @@ for idx = 1:size(m,2)
         old_error = error;
         
         % Force Converge
-        if epoch >= 1000
+        if epoch >= 200
             has_converged = true;
         end
     end
     
-    fprintf('Iterations: %f\n',epoch);
+    % fprintf('Iterations: %f\n',epoch);
     
     % Error rate on Training Data
     count1 = get_error_count(x,w,v,hidden_units,training_labels,k);
@@ -127,7 +125,10 @@ end % Looping through all 'm'
 
 % Plots
 figure;
+
+title('Error Rate v/s No. of hidden units');
 plot(m,traning_errors,'-r',m,validation_errors,'-b');
+legend('Training-error','Validation-error');
 xlabel('Number of Hidden Units');
 ylabel('Error');
 
