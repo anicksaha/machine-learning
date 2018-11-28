@@ -85,7 +85,7 @@ for idx = 1:size(m,2)
         end
         
         % Check Convergence
-        if abs(abs(old_error) - abs(error))/abs(old_error) < 0.07
+        if abs(abs(old_error) - abs(error))/abs(old_error) < 0.075
             has_converged = true;
         end
         
