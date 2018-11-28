@@ -100,8 +100,8 @@ for idx = 1:size(m,2)
         old_error = error;
         
         % Force Converge
-        if epoch > 100
-            break;
+        if epoch >= 100
+            has_converged = true;
         end
     end
     
