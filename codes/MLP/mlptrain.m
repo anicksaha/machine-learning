@@ -14,7 +14,7 @@ validation_labels = validation_data(:,end);
 bias = ones(size(validation_inputs,1),1);
 v_x =[bias validation_inputs(:,:)];
 
-stepsize = 0.001;
+stepsize = 0.000001;
 min_error = 1;
 
 % Store the errors for all 'm' for plotting.
@@ -92,7 +92,7 @@ for idx = 1:size(m,2)
         
         % Adaptive Learning Rate
         if abs(error) < abs(old_error)
-            stepsize = stepsize + 0.001;
+            stepsize = stepsize + 0.0001;
         else 
             stepsize = stepsize - 0.01*stepsize;
         end
