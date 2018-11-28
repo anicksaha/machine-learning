@@ -5,9 +5,9 @@ clc;
 clear;
 
 % Load the data
-training_data = load('optdigits_train.txt');
-validation_data = load('optdigits_valid.txt');
-testing_data = load('optdigits_test.txt');
+training_data = load('data/optdigits_train.txt');
+validation_data = load('data/optdigits_valid.txt');
+testing_data = load('data/optdigits_test.txt');
 
 % m: number of hidden units.
 m = [3,6,9,12,15,18];
