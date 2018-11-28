@@ -1,1 +1,1 @@
-MLP implementation with 1 hidden layer and ReLU activation.
+MLP(Multilayer Perceptron) implementation with 1 hidden layer and ReLU activation.
