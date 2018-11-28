@@ -4,7 +4,7 @@ training_inputs = training_data(:,1:end-1);
 training_labels = training_data(:,end);
 dimesion = size(training_inputs,2);
 
-% Bias x_0 = 1
+% x0 = 1 | Bias
 bias = ones(size(training_inputs,1),1);
 x =[bias training_inputs(:,:)];
 
@@ -14,7 +14,7 @@ validation_labels = validation_data(:,end);
 bias = ones(size(validation_inputs,1),1);
 v_x =[bias validation_inputs(:,:)];
 
-stepsize = 0.000001;
+stepsize = 0.0001;
 min_error = 1;
 
 % Store the errors for all 'm' for plotting.
@@ -48,8 +48,9 @@ for idx = 1:size(m,2)
         error = 0;
         
         for t = 1:size(x,1)
-            % Forward Step
-            z = [1]; % z_0
+            
+            % Feed Forward
+            z = [1];
             for h = 1:hidden_units
                 z_h = ReLU(x(t,:), w(h,:));
                 z = [z,z_h]; % dimension 1 X (m+1)
