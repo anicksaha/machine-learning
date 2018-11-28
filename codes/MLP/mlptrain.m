@@ -87,13 +87,20 @@ for idx = 1:size(m,2)
         end
         
         % Check Convergence
-        if abs(abs(old_error) - abs(error))/abs(old_error) < 0.1
+        if abs(abs(old_error) - abs(error))/abs(old_error) < 0.05
             has_converged = true;
         end
         
         % fprintf('%f and %f\n', abs(old_error), abs(error));
        
         old_error = error;
+        
+        % Adaptive Learning Rate
+        if abs(error) < abs(old_error)
+            stepsize = stepsize + 0.001;
+        else 
+            stepsize = stepsize - 0.01*stepsize;
+        end
         
         % Force Converge
         if epoch >= 1000
