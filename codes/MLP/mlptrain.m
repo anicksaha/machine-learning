@@ -2,7 +2,6 @@ function [Z, W, V] = mlptrain(training_data, validation_data, m, k)
 
 training_inputs = training_data(:,1:end-1);
 training_labels = training_data(:,end);
-no_of_classes = unique(training_labels);
 dimesion = size(training_inputs,2);
 
 % Bias x_0 = 1
@@ -63,7 +62,7 @@ for idx = 1:size(m,2)
             end
             
             % Softmax(y)
-            r = one_hot_encoding(training_labels(t),size(no_of_classes,1));
+            r = one_hot_encoding(training_labels(t), k);
             y = softmax(y);
             error = error + r*log(y)'; % Cross Entropy 
             
@@ -87,13 +86,23 @@ for idx = 1:size(m,2)
         end
         
         % Check Convergence
-        if abs((-error)- (-old_error)) < 0.1
+        if abs(abs(error) - abs(old_error)) < 0.1
             has_converged = true;
         end
+        
+        % Adaptive Learning Rate
+        if abs(error) < abs(old_error)
+            stepsize = stepsize + 0.001;
+        else 
+            stepsize = stepsize - 0.01*stepsize;
+        end
+            
         old_error = error;
         
-        % TD_DO: Adaptive Learning Rate
-
+        % Force Converge
+        if epoch > 100
+            break;
+        end
     end
     
     fprintf('Iterations: %f\n',epoch);
