@@ -14,7 +14,6 @@ validation_labels = validation_data(:,end);
 bias = ones(size(validation_inputs,1),1);
 v_x =[bias validation_inputs(:,:)];
 
-stepsize = 1e-5;
 min_error = 1;
 
 % Store the errors for all 'm' for plotting.
@@ -31,11 +30,12 @@ for idx = 1:size(m,2)
       
     % dimension [m x (d+1)]
     w = (b-a).*rand(hidden_units,dimesion+1) + a;
-    size(w)
+    
     % dimension [k x (m+1)]
     v = (b-a).*rand(k,hidden_units+1) + a; 
     
     has_converged = false;
+    stepsize = 1e-5;
    
     old_error = 0;
     epoch = 0;
@@ -84,7 +84,7 @@ for idx = 1:size(m,2)
         end
         
         diff = old_error-error;
-        % fprintf('%f\n', dif);
+        % fprintf('%f\n', diff);
         
         % Check Convergence
         if abs(diff) < 0.01 || epoch >= 1000
@@ -94,8 +94,8 @@ for idx = 1:size(m,2)
         old_error = error;
         
         % Adaptive Learning
-        if epoch>700
-            stepsize = 1e-8;
+        if epoch >= 750
+            stepsize = 1e-6;
         end
     end % while !converge
     
