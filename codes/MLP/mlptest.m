@@ -11,9 +11,8 @@ x =[bias test_inputs(:,:)];
 hidden_units = size(w,1);
 k = 10;
 
-count = get_error_count(x, w, v, hidden_units, test_labels, k);
+error_rate = Get_Error_Rate(x, w, v, hidden_units, test_labels, k);
 
-error = count/size(test_data,1);
-fprintf('For hidden units: %f, Test Error: %f\n', hidden_units, error);
+fprintf('For hidden units: %f, Test Error: %f\n', hidden_units, error_rate);
 
 end
