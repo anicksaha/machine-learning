@@ -99,7 +99,7 @@ for idx = 1:size(m,2)
         end
     end
     
-    fprintf('Iterations: %f\n',epoch);
+    % fprintf('Iterations: %f\n',epoch);
     
     % Error rate on Training Data
     error = Get_Error_Rate(x,w,v,hidden_units,training_labels,k);
