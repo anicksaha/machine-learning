@@ -1,6 +1,3 @@
 function[z_h]= ReLU(x,w)
-    z_h = x*w';
-    if z_h<0
-        z_h=0;
-    end
+    z_h=max(0,x*w');
 end
