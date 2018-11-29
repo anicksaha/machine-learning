@@ -14,7 +14,7 @@ validation_labels = validation_data(:,end);
 bias = ones(size(validation_inputs,1),1);
 v_x =[bias validation_inputs(:,:)];
 
-stepsize = 0.001;
+stepsize = 1e-5;
 min_error = 1;
 
 % Store the errors for all 'm' for plotting.
@@ -31,7 +31,7 @@ for idx = 1:size(m,2)
       
     % dimension [m x (d+1)]
     w = (b-a).*rand(hidden_units,dimesion+1) + a;
-    
+    size(w)
     % dimension [k x (m+1)]
     v = (b-a).*rand(k,hidden_units+1) + a; 
     
@@ -41,9 +41,7 @@ for idx = 1:size(m,2)
     epoch = 0;
     
     while ~has_converged
-        
         epoch = epoch + 1;
-        
         z_data = [];
         error = 0;
         
@@ -76,30 +74,32 @@ for idx = 1:size(m,2)
                 if z_new(1,i)==0
                     dw = [dw;zeros(1,dimesion+1)];
                 else
-                    w_h = stepsize*((r-y)*v(:,i+1))*x(t,:);
-                    dw = [dw;w_h];
-                end
+                   w_h = stepsize*((r-y)*v(:,i+1))*x(t,:);
+                   dw = [dw;w_h];
+               end
             end
+         
             v = v + dv;
             w = w + dw;
         end
         
+        diff = old_error-error;
+        % fprintf('%f\n', dif);
+        
         % Check Convergence
-        if abs(abs(old_error) - abs(error))/abs(old_error) < 0.075
+        if abs(diff) < 0.01 || epoch >= 1000
             has_converged = true;
         end
-        
-        % fprintf('%f and %f\n', abs(old_error), abs(error));
-       
+              
         old_error = error;
         
-        % Force Converge
-        if epoch >= 200
-            has_converged = true;
+        % Adaptive Learning
+        if epoch>700
+            stepsize = 1e-8;
         end
-    end
+    end % while !converge
     
-    % fprintf('Iterations: %f\n',epoch);
+    fprintf('Iterations: %f\n',epoch);
     
     % Error rate on Training Data
     count1 = get_error_count(x,w,v,hidden_units,training_labels,k);
