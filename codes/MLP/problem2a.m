@@ -20,7 +20,6 @@ k = 10;
 % v: [k x (m+1)] matrix of hidden unit weight.
 [z,w,v] = mlptrain(training_data, validation_data, m, k);
 
-
 % z: [n x m] matrix of hidden unit values.
 % n is the number of training samples.
 [z] = mlptest(testing_data, w, v);
